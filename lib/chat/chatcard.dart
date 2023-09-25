@@ -1,14 +1,20 @@
-import 'package:chatapp/friends/friend.dart';
+import 'package:chatapp/chat/chat.dart';
+import 'package:chatapp/chatting/chattingpage.dart';
 import 'package:flutter/material.dart';
 
-class FriendCard extends StatelessWidget {
-  const FriendCard({super.key, required this.friend});
-  final Friend friend;
+class ChatCard extends StatelessWidget {
+  const ChatCard({super.key, required this.chat});
+
+  final Chat chat;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return const ChattingPage();
+        }));
+      },
       onLongPress: () {},
       child: Container(
         decoration: const BoxDecoration(
@@ -31,18 +37,18 @@ class FriendCard extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         radius: 29,
-                        backgroundImage: NetworkImage(friend.picture),
+                        backgroundImage: NetworkImage(chat.picture),
                       ),
                     ],
                   ),
                 ),
                 Expanded(
-                  flex: 4,
+                  flex: 3,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        friend.name,
+                        chat.name,
                         style: const TextStyle(
                           fontFamily: 'Poppins',
                           fontSize: 16,
@@ -53,16 +59,32 @@ class FriendCard extends StatelessWidget {
                         height: 8.0,
                       ),
                       Text(
-                        friend.status,
+                        chat.lastChat,
+                        overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                           fontFamily: 'Poppins',
-                          fontSize: 16,
+                          fontSize: 14,
                           color: Color.fromARGB(255, 233, 237, 239),
                         ),
                       ),
                     ],
                   ),
                 ),
+                Expanded(
+                    flex: 1,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          chat.latestTimestamp,
+                          style: const TextStyle(
+                            fontFamily: 'Poppins',
+                            fontSize: 12,
+                            color: Color.fromARGB(255, 154, 155, 155),
+                          ),
+                        ),
+                      ],
+                    ))
               ],
             ),
           ),
