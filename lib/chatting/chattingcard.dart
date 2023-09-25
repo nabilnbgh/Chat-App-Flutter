@@ -32,7 +32,7 @@ class ChattingCard extends StatelessWidget {
             textChat,
             style: const TextStyle(
               fontFamily: 'Poppins',
-              fontSize: 13,
+              fontSize: 12,
               color: Colors.white,
             ),
           ),
