@@ -1,16 +1,17 @@
-# chatapp
+# Chat Application 
 
-A new Flutter project.
+This is a simple Flutter project with only frontend implemented.
+The application is inspired by Whatsapp
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is developed using flutter.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshot
+- Chat Page
+![Alt text](screenshot/chat.jpeg?raw=true "Chat")
+![Alt text](screenshot/chatpage.jpeg?raw=true "Chat Page")
+- Friend Page
+![Alt text](screenshot/friendpage.jpeg?raw=true "Friend Page")
+- Profile Page
+![Alt text](screenshot/profilepage.jpeg?raw=true "Profile Page")
